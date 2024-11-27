@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/passwd_vault.dir/main.c.o -o passwd_vault  -Wl,-rpath,/mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/build/lib lib/libencrypt_lib.so 

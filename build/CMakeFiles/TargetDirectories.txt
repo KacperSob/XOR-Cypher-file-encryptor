@@ -1,0 +1,6 @@
+/mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/build/CMakeFiles/passwd_vault.dir
+/mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/build/lib/CMakeFiles/encrypt_lib.dir
+/mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/build/lib/CMakeFiles/edit_cache.dir
+/mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/build/lib/CMakeFiles/rebuild_cache.dir
