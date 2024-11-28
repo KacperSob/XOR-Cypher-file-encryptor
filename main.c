@@ -2,10 +2,15 @@
 #include <stdio.h>
 #include <string.h>
 #include "lib/fileoperator.h"
+#include "lib/utestbase.h"
+#include <stdbool.h>
 
 #define ERROR_MSG "Wrong usage!\n\nPlease use\n$ encrypt.exe filename -e|-d <keyname.key>\n\n-e        \tENCRYPT FILE\n-d key.key\tDECRYPT FILE\n\n"
 
 int main(int argc, char* argv[]){
+
+    if(TESTS_START() == false) return -1;
+
     if(argc < 3 || argc > 4){
         printf(ERROR_MSG);
         return 0;

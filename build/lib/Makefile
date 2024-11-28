@@ -178,6 +178,54 @@ fileoperator.c.s:
 	cd /mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/encrypt_lib.dir/build.make lib/CMakeFiles/encrypt_lib.dir/fileoperator.c.s
 .PHONY : fileoperator.c.s
 
+tests.o: tests.c.o
+.PHONY : tests.o
+
+# target to build an object file
+tests.c.o:
+	cd /mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/encrypt_lib.dir/build.make lib/CMakeFiles/encrypt_lib.dir/tests.c.o
+.PHONY : tests.c.o
+
+tests.i: tests.c.i
+.PHONY : tests.i
+
+# target to preprocess a source file
+tests.c.i:
+	cd /mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/encrypt_lib.dir/build.make lib/CMakeFiles/encrypt_lib.dir/tests.c.i
+.PHONY : tests.c.i
+
+tests.s: tests.c.s
+.PHONY : tests.s
+
+# target to generate assembly for a file
+tests.c.s:
+	cd /mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/encrypt_lib.dir/build.make lib/CMakeFiles/encrypt_lib.dir/tests.c.s
+.PHONY : tests.c.s
+
+utestbase.o: utestbase.c.o
+.PHONY : utestbase.o
+
+# target to build an object file
+utestbase.c.o:
+	cd /mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/encrypt_lib.dir/build.make lib/CMakeFiles/encrypt_lib.dir/utestbase.c.o
+.PHONY : utestbase.c.o
+
+utestbase.i: utestbase.c.i
+.PHONY : utestbase.i
+
+# target to preprocess a source file
+utestbase.c.i:
+	cd /mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/encrypt_lib.dir/build.make lib/CMakeFiles/encrypt_lib.dir/utestbase.c.i
+.PHONY : utestbase.c.i
+
+utestbase.s: utestbase.c.s
+.PHONY : utestbase.s
+
+# target to generate assembly for a file
+utestbase.c.s:
+	cd /mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/encrypt_lib.dir/build.make lib/CMakeFiles/encrypt_lib.dir/utestbase.c.s
+.PHONY : utestbase.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -193,6 +241,12 @@ help:
 	@echo "... fileoperator.o"
 	@echo "... fileoperator.i"
 	@echo "... fileoperator.s"
+	@echo "... tests.o"
+	@echo "... tests.i"
+	@echo "... tests.s"
+	@echo "... utestbase.o"
+	@echo "... utestbase.i"
+	@echo "... utestbase.s"
 .PHONY : help
 
 

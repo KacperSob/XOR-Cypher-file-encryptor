@@ -97,19 +97,51 @@ lib/CMakeFiles/encrypt_lib.dir/fileoperator.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/encrypt_lib.dir/fileoperator.c.s"
 	cd /mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/lib/fileoperator.c -o CMakeFiles/encrypt_lib.dir/fileoperator.c.s
 
+lib/CMakeFiles/encrypt_lib.dir/utestbase.c.o: lib/CMakeFiles/encrypt_lib.dir/flags.make
+lib/CMakeFiles/encrypt_lib.dir/utestbase.c.o: /mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/lib/utestbase.c
+lib/CMakeFiles/encrypt_lib.dir/utestbase.c.o: lib/CMakeFiles/encrypt_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object lib/CMakeFiles/encrypt_lib.dir/utestbase.c.o"
+	cd /mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/encrypt_lib.dir/utestbase.c.o -MF CMakeFiles/encrypt_lib.dir/utestbase.c.o.d -o CMakeFiles/encrypt_lib.dir/utestbase.c.o -c /mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/lib/utestbase.c
+
+lib/CMakeFiles/encrypt_lib.dir/utestbase.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/encrypt_lib.dir/utestbase.c.i"
+	cd /mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/lib/utestbase.c > CMakeFiles/encrypt_lib.dir/utestbase.c.i
+
+lib/CMakeFiles/encrypt_lib.dir/utestbase.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/encrypt_lib.dir/utestbase.c.s"
+	cd /mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/lib/utestbase.c -o CMakeFiles/encrypt_lib.dir/utestbase.c.s
+
+lib/CMakeFiles/encrypt_lib.dir/tests.c.o: lib/CMakeFiles/encrypt_lib.dir/flags.make
+lib/CMakeFiles/encrypt_lib.dir/tests.c.o: /mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/lib/tests.c
+lib/CMakeFiles/encrypt_lib.dir/tests.c.o: lib/CMakeFiles/encrypt_lib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object lib/CMakeFiles/encrypt_lib.dir/tests.c.o"
+	cd /mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/encrypt_lib.dir/tests.c.o -MF CMakeFiles/encrypt_lib.dir/tests.c.o.d -o CMakeFiles/encrypt_lib.dir/tests.c.o -c /mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/lib/tests.c
+
+lib/CMakeFiles/encrypt_lib.dir/tests.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/encrypt_lib.dir/tests.c.i"
+	cd /mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/lib/tests.c > CMakeFiles/encrypt_lib.dir/tests.c.i
+
+lib/CMakeFiles/encrypt_lib.dir/tests.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/encrypt_lib.dir/tests.c.s"
+	cd /mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/lib/tests.c -o CMakeFiles/encrypt_lib.dir/tests.c.s
+
 # Object files for target encrypt_lib
 encrypt_lib_OBJECTS = \
 "CMakeFiles/encrypt_lib.dir/encrypt.c.o" \
-"CMakeFiles/encrypt_lib.dir/fileoperator.c.o"
+"CMakeFiles/encrypt_lib.dir/fileoperator.c.o" \
+"CMakeFiles/encrypt_lib.dir/utestbase.c.o" \
+"CMakeFiles/encrypt_lib.dir/tests.c.o"
 
 # External object files for target encrypt_lib
 encrypt_lib_EXTERNAL_OBJECTS =
 
 lib/libencrypt_lib.so: lib/CMakeFiles/encrypt_lib.dir/encrypt.c.o
 lib/libencrypt_lib.so: lib/CMakeFiles/encrypt_lib.dir/fileoperator.c.o
+lib/libencrypt_lib.so: lib/CMakeFiles/encrypt_lib.dir/utestbase.c.o
+lib/libencrypt_lib.so: lib/CMakeFiles/encrypt_lib.dir/tests.c.o
 lib/libencrypt_lib.so: lib/CMakeFiles/encrypt_lib.dir/build.make
 lib/libencrypt_lib.so: lib/CMakeFiles/encrypt_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C shared library libencrypt_lib.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library libencrypt_lib.so"
 	cd /mnt/c/Users/kacper/Documents/PROGRAMY/self/vault/Simple_Password_Vault/build/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/encrypt_lib.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -1,0 +1,3 @@
+1. Fix encrypt_decrypt() function
+    IDEAS:
+        Add input str length as a 4th argument
