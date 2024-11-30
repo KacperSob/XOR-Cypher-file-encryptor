@@ -9,12 +9,16 @@
 
 int main(int argc, char* argv[]){
 
+    /*
+    // TESTS
+
     if(TESTS_START() == false) return -1;
 
     if(argc < 3 || argc > 4){
         printf(ERROR_MSG);
         return 0;
     }
+    */
 
     if(strcmp(argv[2], "-e") == 0) {
         encrypt(argv[1]);

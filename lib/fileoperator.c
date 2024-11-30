@@ -19,17 +19,17 @@ void encrypt(char *filename){
     keyGen(key, keySize, keyOut);
 
     char buffer[2000];
-    char enc_buffer[2000];
+    char enc_buffer[3000];
 
     //printf("ENCRYPTING . . .\n");
 
     while (fgets(buffer, 2000, file) != NULL)
     {
         buffer[strcspn(buffer, "\r\n")] = 0;
-        encrpyt_decrypt(key, buffer, enc_buffer);
+        memset(enc_buffer,0,3000);
+        encrpyt_decrypt(key, buffer, enc_buffer, strlen(buffer));
         fprintf(fileOut, "%s\n", enc_buffer);
-        memset(buffer,0,strlen(buffer));
-        memset(enc_buffer,0,strlen(enc_buffer));
+        memset(buffer,0,2000);
     }
 
     free(key);
@@ -46,6 +46,7 @@ void keyGen(char *key, int keySize, FILE *File){
     for(int i = 0; i < keySize; i++){
         key[i] = (char)(rand()%KEY_SIZE);
     }
+    key[strcspn(key, "\r\n")] = 0;
     fprintf(File, "%s", key);
 }
 
@@ -57,21 +58,21 @@ void decrypt(char *filename, char *keyFilename){
     FILE *keyIn = fopen(keyFilename, "r");
     FILE *fileOut = fopen("decrypted.txt", "w");
 
-    char key[1000];
-    fgets(key, 1000, keyIn);
+    char key[2000];
+    fgets(key, 2000, keyIn);
 
     char buffer[2000];
-    char enc_buffer[2000];
+    char enc_buffer[3000];
 
     //printf("DECRYPTING . . .\n");
 
     while (fgets(buffer, 2000, file) != NULL)
     {
         buffer[strcspn(buffer, "\r\n")] = 0;
-        encrpyt_decrypt(key, buffer, enc_buffer);
+        memset(enc_buffer,0,3000);
+        encrpyt_decrypt(key, buffer, enc_buffer, strlen(buffer));
         fprintf(fileOut, "%s\n", enc_buffer);
-        memset(buffer,0,strlen(buffer));
-        memset(enc_buffer,0,strlen(enc_buffer));
+        memset(buffer,0,2000);
     }
 
     fclose(file);

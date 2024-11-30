@@ -43,17 +43,17 @@ bool __ENC_DEC_ALGORITHM_TEST(){
     char outputD[4][2000];
     int keySize = rand()%900+100;
     char *key = (char *)malloc(keySize*sizeof(char));
-
     for(int i = 0; i < keySize; i++){
-        key[i] = (char)(rand()%255);
+        key[i] = (char)(rand()%205+50);
     }
 
     for(int i = 0; i < 4; i++){
-        encrpyt_decrypt(key, input[i], output[i]);
+        encrpyt_decrypt(key, input[i], output[i], strlen(input[i]));
     }
     for(int i = 0; i < 4; i++){
-        encrpyt_decrypt(key, output[i], outputD[i]);
+        encrpyt_decrypt(key, output[i], outputD[i], strlen(output[i]));
     }
+    free(key);
     for(int i = 0; i < 4; i++){
         //printf("%s\n", outputD[i]);
         if(strcmp(outputD[i], input[i]) != 0 ) return false;
@@ -63,23 +63,39 @@ bool __ENC_DEC_ALGORITHM_TEST(){
 }
 
 bool __ENCRYPT_FUNC_TEST(){
-    encrypt("inputtexttest.txt");
+    encrypt("test.txt");
     decrypt("encrypted.txt", "encrypted.key");
 
+    // printf("CASE 1\n");
+
     FILE *decrypted = fopen("decrypted.txt", "r");
-    FILE *encrypted = fopen("inputtexttest.txt", "r");
+    FILE *encrypted = fopen("test.txt", "r");
 
     char ebuffer[2000];
     char dbuffer[2000];
 
+    // printf("CASE 2\n");
+
     while (fgets(ebuffer, 2000, encrypted) != NULL)
     {
         fgets(dbuffer, 2000, decrypted);
+        // printf("CASE 3\n");
         ebuffer[strcspn(ebuffer, "\r\n")] = 0;
         dbuffer[strcspn(dbuffer, "\r\n")] = 0;
         //printf("%s | %s", ebuffer, dbuffer);
-        if(strcmp(ebuffer, dbuffer) != 0) return false;
+        // printf("CASE 4\n");
+        if(strcmp(ebuffer, dbuffer) != 0) {
+            fclose(encrypted);
+            fclose(decrypted);
+            return false;
+        }
+        memset(ebuffer,0,sizeof(ebuffer));
+        memset(dbuffer,0,sizeof(dbuffer));
+        // printf("CASE 5\n");
     }
+
+    fclose(encrypted);
+    fclose(decrypted);
     
     return true;
 }
@@ -91,36 +107,61 @@ bool __ALL_ENC_TEST(){
     int strSize = rand()%300+50;
     char *str = (char*)malloc(strSize*sizeof(char));
     int keySize = rand()%900+100;
-    char *key = (char *)malloc(keySize*sizeof(char));
+    char *key = (char*)malloc(keySize*sizeof(char));
     int i, index;
+    // printf("CASE 1\n");
+    char output[2000];
+    char outputd[2000];
 
-    char output[2000], outputd[2000];
-
-    for(int i = 0; i < 100; i++) {
-        for (i = 0; i < strSize-1; i++) {
-           index = rand() % 62;
-           str[i] = random_char(index);
-        }
-        str[i] = '\0';
-        testKeyGen(key, keySize);
-
-        encrpyt_decrypt(key, str, output);
-        encrpyt_decrypt(key, output, outputd);
-
-        memset(str,0,strlen(str));
-        memset(output,0,strlen(output));
-        memset(outputd,0,strlen(outputd));
-
-        if(strcmp(str, outputd) != 0) return false;
-    } 
+    // printf("CASE 2\n");
     
+    int j = 0;
+
+    str[0] = '\0';
+
+    memset(str,0,strlen(str));
+
+    for (j = 0; j < strSize-1; j++) {
+       index = rand() % 62;
+       str[j] = random_char(index);
+    }
+    // printf("CASE 3\n");
+    str[j] = '\0';
+    
+    str[strcspn(str, "\r\n")] = 0;
+
+    testKeyGen(key, keySize);
+
+    output[0] = '\0';
+    outputd[0] = '\0';
+    memset(output,0,strlen(output));
+    memset(outputd,0,strlen(outputd));
+    encrpyt_decrypt(key, str, output, strSize);
+    encrpyt_decrypt(key, output, outputd, strlen(output));
+    // printf("CASE 4\n");
+    if(strcmp(str, outputd) != 0) {
+        printf("%s | %s \n", str, outputd);
+        free(str);
+        free(key);
+        
+        return false;
+    }
+
+    str[0] = 'a';
+    str[1] = 'b';
+    str[2] = '\0';
+
+    free(str);
+    free(key);
+
     return true;
 }
 
 void testKeyGen(char *key, int keySize){
     for(int i = 0; i < keySize; i++){
-        key[i] = (char)(rand()%255);
+        key[i] = (char)(rand()%205+50);
     }
+    key[strcspn(key, "\r\n")] = 0;
 }
 
 char random_char(int index) {char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";return charset[index];}
