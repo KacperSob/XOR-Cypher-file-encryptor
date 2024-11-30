@@ -14,7 +14,7 @@ $make
 ```
 ## How to run
 
-```
+```console
 $./passwd_vault {file_to_encrypt} -e
 $./passwd_vault {encrypted_file} -d {encryption.key}
 ```
