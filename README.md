@@ -1,7 +1,6 @@
 # XOR Cypher File encryptor
 
 Simple XOR Cypher File encryptor <br>
-<br>
 
 ## How to install
 
