@@ -21,5 +21,6 @@ $./passwd_vault {encrypted_file} -d {encryption.key}
 
 ### Usefull knowledge
 
-Key generation is a little buggy. It is recommended to run a tests before running. <br>
+Encrypting and decrypting is a little buggy. It is recommended to run this program a few times to make sure that it's working. <br>
+It is recommended to run a tests before running. <br>
 Tests are disabled by default in main.c file. <br>
