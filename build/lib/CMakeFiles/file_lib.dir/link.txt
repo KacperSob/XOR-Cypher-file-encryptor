@@ -1,2 +1,0 @@
-/usr/bin/ar qc libfile_lib.a CMakeFiles/file_lib.dir/fileoperator.c.o
-/usr/bin/ranlib libfile_lib.a

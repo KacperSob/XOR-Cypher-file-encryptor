@@ -1,1 +1,0 @@
-/usr/bin/cc -fPIC -shared -Wl,-soname,libencrypt_lib.so -o libencrypt_lib.so CMakeFiles/encrypt_lib.dir/encrypt.c.o CMakeFiles/encrypt_lib.dir/fileoperator.c.o CMakeFiles/encrypt_lib.dir/utestbase.c.o CMakeFiles/encrypt_lib.dir/tests.c.o 
